@@ -19,34 +19,30 @@ import android.widget.TextView;
 import com.benju.simpletabbarview.R;
 import com.benju.simpletabbarview.view.TabBarView;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-
 public class MainActivity extends AppCompatActivity {
 
     // Tabs
     public static final int MENU_ITEM_1 = 0;
     public static final int MENU_ITEM_2 = 1;
     public static final int MENU_ITEM_3 = 2;
-    int[] tabs_strings = {
+    private int[] tabs_strings = {
             R.string.section1,
             R.string.section2,
             R.string.section3
     };
-    int[] tab_icons = {
+    private int[] tab_icons = {
             R.drawable.ic_favorite_white_24dp,
             R.drawable.ic_favorite_white_24dp,
             R.drawable.ic_favorite_white_24dp
     };
 
-    @InjectView(R.id.pager) ViewPager mViewPager;
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
-
+        mViewPager = (ViewPager) findViewById(R.id.pager);
         setupEmbeddedTabs();
     }
 
@@ -86,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setCustomView(customView);
 
+        // TODO: 18/12/2016 Use Toolbar to remove left space
+        
         tabBarView.setStripHeight(5);
 
         SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
@@ -105,10 +103,10 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
+
             /*Fragment fragment = null;
             switch (position) {
                 case MENU_ITEM_1: {
-
                     break;
                 }
                 case MENU_ITEM_2: {
@@ -179,4 +177,5 @@ public class MainActivity extends AppCompatActivity {
             return rootView;
         }
     }
+
 }

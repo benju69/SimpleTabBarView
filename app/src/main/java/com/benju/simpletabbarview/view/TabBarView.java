@@ -208,4 +208,5 @@ public class TabBarView extends LinearLayout {
     public void setOnPageChangeListener(OnPageChangeListener listener) {
         this.delegatePageListener = listener;
     }
+
 }

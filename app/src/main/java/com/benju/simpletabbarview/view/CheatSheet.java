@@ -16,6 +16,7 @@ import android.widget.Toast;
  * ActionMenuItemView.java</a>.
  */
 public class CheatSheet {
+
     /**
      * The estimated height of a toast, in dips (density-independent pixels). This is used to
      * determine whether or not the toast should appear above or below the UI element.
@@ -127,4 +128,5 @@ public class CheatSheet {
         cheatSheet.show();
         return true;
     }
+
 }

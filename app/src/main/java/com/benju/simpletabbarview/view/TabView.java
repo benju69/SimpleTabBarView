@@ -80,4 +80,5 @@ public class TabView extends LinearLayout {
         mTextView.setText(text);
         mTextView.setCompoundDrawablesWithIntrinsicBounds(resIcon, 0, 0, 0);
     }
+    
 }
