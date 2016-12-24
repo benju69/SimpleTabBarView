@@ -2,6 +2,7 @@ package com.benju.simpletabbarview.view;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -50,7 +51,7 @@ public class TabView extends LinearLayout {
         mTextView.setGravity(Gravity.CENTER);
         mTextView.setCompoundDrawablePadding(pad);
         mTextView.setTextAppearance(context, textStyle);
-        mTextView.setTextColor(context.getResources().getColor(android.R.color.white));
+        mTextView.setTextColor(ContextCompat.getColor(context, android.R.color.white));
 
         this.addView(mImageView);
         this.addView(mTextView);
@@ -59,7 +60,7 @@ public class TabView extends LinearLayout {
     }
 
     public void setIcon(int resId) {
-        setIcon(getContext().getResources().getDrawable(resId));
+        setIcon(ContextCompat.getDrawable(getContext(), resId));
     }
 
     public void setIcon(Drawable icon) {

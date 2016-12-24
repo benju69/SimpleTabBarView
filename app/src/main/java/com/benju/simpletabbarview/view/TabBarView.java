@@ -19,7 +19,7 @@ import android.widget.LinearLayout;
 public class TabBarView extends LinearLayout {
 
     public interface IconTabProvider {
-        public int getPageIconResId(int position);
+        int getPageIconResId(int position);
     }
 
     private static final int STRIP_HEIGHT = 0;
@@ -138,6 +138,7 @@ public class TabBarView extends LinearLayout {
         @Override
         public void onPageScrollStateChanged(int state) {
             if (state == ViewPager.SCROLL_STATE_IDLE) {
+                //nothing
             }
             if (delegatePageListener != null) {
                 delegatePageListener.onPageScrollStateChanged(state);

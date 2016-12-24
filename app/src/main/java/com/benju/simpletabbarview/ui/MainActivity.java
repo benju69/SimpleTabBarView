@@ -74,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
         TabBarView tabBarView = (TabBarView) customView.findViewById(R.id.tab_bar);
         customView.setLayoutParams(new ViewGroup.LayoutParams(WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.MATCH_PARENT));
 
-        getSupportActionBar().setDisplayUseLogoEnabled(false);
         getSupportActionBar().setDisplayShowHomeEnabled(false);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
